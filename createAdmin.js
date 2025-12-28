@@ -48,7 +48,7 @@ const createAdminUser = async () => {
         console.log('🔑 Password:', adminData.password);
         console.log('👑 Role: Admin\n');
         console.log('⚠️  IMPORTANT: Change the password after first login!\n');
-        console.log('✨ You can now login at: http://localhost:5173/login\n');
+        console.log('✨ You can now login at: https://saylani-donation-zakat-system.vercel.app/login\n');
 
         process.exit(0);
     } catch (error) {

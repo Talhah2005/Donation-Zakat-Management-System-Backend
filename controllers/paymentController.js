@@ -53,8 +53,8 @@ export const createCheckoutSession = async (req, res) => {
                 },
             ],
             mode: 'payment',
-            success_url: `http://localhost:5173/payment-success?session_id={CHECKOUT_SESSION_ID}`,
-            cancel_url: `http://localhost:5173/campaigns?canceled=true`,
+            success_url: `https://saylani-donation-zakat-system.vercel.app/payment-success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `https://saylani-donation-zakat-system.vercel.app/campaigns?canceled=true`,
             metadata: {
                 userId: req.user._id.toString(),
                 campaignId: campaignId || '',

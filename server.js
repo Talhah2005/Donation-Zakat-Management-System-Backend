@@ -61,11 +61,12 @@ console.log('✅ Morgan logging installed');
 // ============================================
 
 // CORS Configuration (BEFORE helmet)
+const frontendUrl = (process.env.FRONTEND_URL || 'https://saylani-donation-zakat-system.vercel.app').replace(/\/$/, '');
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: frontendUrl,
     credentials: true
 }));
-console.log('✅ CORS installed');
+console.log('✅ CORS installed for origin:', frontendUrl);
 
 // Security Middleware
 app.use(helmet());
